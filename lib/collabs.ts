@@ -43,7 +43,7 @@ export const collabs: Collab[] = [
     mainImage: "/collabs/homeboy.jpg",
     supportImages: [],
     links: [
-      { label: "Watch Video", url: "https://youtube.com" },
+      { label: "Watch Video", url: "https://www.youtube.com/watch?v=aXGMyOAYM6E" },
     ],
     year: "2023",
     category: "Music Video",
@@ -103,7 +103,8 @@ export const collabs: Collab[] = [
     mainImage: "/collabs/visions.jpg",
     supportImages: [],
     links: [
-      { label: "Watch on Promonews", url: "https://www.promonews.tv/videos/2024/11/11/visions-hell-unjust-memes-blatant-space/88950" },
+      { label: "Watch Video", url: "https://www.youtube.com/watch?v=VmYBq9O5774" },
+      { label: "View on Promonews", url: "https://www.promonews.tv/videos/2024/11/11/visions-hell-unjust-memes-blatant-space/88950" },
     ],
     year: "2024",
     category: "Music Video",
