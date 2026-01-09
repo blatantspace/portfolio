@@ -16,10 +16,10 @@ export default function ContactSection() {
 
         <div className="space-y-6">
           <a
-            href="mailto:hello@blatantspace.com"
+            href="mailto:blatantspace@gmail.com"
             className="inline-block text-2xl text-cream hover:text-rust transition-colors"
           >
-            hello@blatantspace.com
+            blatantspace@gmail.com
           </a>
 
           <div className="flex gap-8 justify-center text-sm text-cream/50">
@@ -32,12 +32,12 @@ export default function ContactSection() {
               Instagram
             </a>
             <a
-              href="https://twitter.com/blatantspace"
+              href="https://foundation.app/@blatantspace"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-cream transition-colors"
             >
-              Twitter
+              Foundation
             </a>
           </div>
         </div>

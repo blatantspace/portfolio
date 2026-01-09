@@ -36,10 +36,10 @@ export default function Footer() {
         
         {/* Email appears on hover */}
         <a 
-          href="mailto:hello@blatantspace.com"
+          href="mailto:blatantspace@gmail.com"
           className="text-2xl md:text-3xl text-cream font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
-          hello@blatantspace.com
+          blatantspace@gmail.com
         </a>
       </div>
     </footer>

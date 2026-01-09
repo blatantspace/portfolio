@@ -2,6 +2,7 @@ import MinimalNav from "./components/MinimalNav";
 import GalleryHero from "./components/GalleryHero";
 import GalleryGrid from "./components/GalleryGrid";
 import GallerySection from "./components/GallerySection";
+import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 
@@ -25,11 +26,8 @@ export default function Home() {
       {/* Grid of imagery - second set */}
       <GalleryGrid count={16} />
 
-      {/* Another break section */}
-      <GallerySection
-        title="Ready when you are"
-        subtitle=""
-      />
+      {/* Projects Section */}
+      <ProjectsSection />
 
       {/* Grid of imagery - third set */}
       <GalleryGrid count={16} />
