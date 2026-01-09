@@ -25,7 +25,7 @@ export const collabs: Collab[] = [
       "Commissioned piece for Gucci's celebration of the Horsebit loafer. Street art meets luxury.",
       "Shown alongside works from artists across the globe.",
     ],
-    mainImage: "/collabs/gucci.png",
+    mainImage: "/collabs/gucci.jpg",
     supportImages: [],
     links: [
       { label: "View Exhibition", url: "https://gucci.com" },
