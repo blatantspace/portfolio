@@ -90,11 +90,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 }
 
 export default function ProjectsSection() {
-  // Don't render section if no projects
-  if (projects.length === 0) {
-    return null;
-  }
-
   return (
     <section className="w-full py-24 px-6 bg-charcoal">
       <div className="max-w-4xl mx-auto">
@@ -115,11 +110,24 @@ export default function ProjectsSection() {
         </motion.div>
 
         {/* Projects List */}
-        <div className="space-y-24">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
-          ))}
-        </div>
+        {projects.length > 0 ? (
+          <div className="space-y-24">
+            {projects.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center py-16"
+          >
+            <p className="text-2xl text-cream/40 font-light">
+              Coming soon
+            </p>
+          </motion.div>
+        )}
       </div>
     </section>
   );
