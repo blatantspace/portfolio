@@ -79,6 +79,21 @@ export const collabs: Collab[] = [
     category: "Music Video",
   },
   {
+    id: "harry-nathan",
+    title: "Harry Nathan",
+    tagline: "Cinematic visual for 'So Real'",
+    description: [
+      "Space visual for the Cosmic Perspective E.P.",
+      "Beautiful and infinite.",
+    ],
+    mainImage: "/collabs/harry-nathan.png",
+    youtubeId: "Xx4YXe_44Ps",
+    supportImages: [],
+    links: [],
+    year: "2023",
+    category: "Music Video",
+  },
+  {
     id: "beak",
     title: "BEAK>",
     tagline: "Tour 7\" single artwork",
