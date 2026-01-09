@@ -58,7 +58,9 @@ export const collabs: Collab[] = [
     ],
     mainImage: "/collabs/royel-otis.png",
     supportImages: [],
-    links: [],
+    links: [
+      { label: "Watch", url: "https://www.youtube.com/watch?v=NbORHQk88-s" },
+    ],
     year: "2024",
     category: "Music Video",
   },
