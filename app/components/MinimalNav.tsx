@@ -5,26 +5,26 @@ import Link from "next/link";
 export default function MinimalNav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo/Home link */}
         <Link
           href="/"
-          className="text-sm font-light text-cream hover:text-cream/80 transition-all"
+          className="text-sm font-light text-cream hover:text-cream/80 transition-all py-2"
         >
           Blatant Space
         </Link>
 
         {/* Navigation links */}
-        <div className="flex gap-4">
+        <div className="flex items-center gap-6">
           <Link
             href="/collabs"
-            className="text-sm font-light text-cream/70 hover:text-cream transition-all"
+            className="text-sm font-light text-cream/70 hover:text-cream transition-all py-2"
           >
             Collabs
           </Link>
           <Link
             href="/projects"
-            className="text-sm font-light text-cream/70 hover:text-cream transition-all"
+            className="text-sm font-light text-cream/70 hover:text-cream transition-all py-2"
           >
             Projects
           </Link>
