@@ -2,6 +2,7 @@ import MinimalNav from "./components/MinimalNav";
 import GalleryHero from "./components/GalleryHero";
 import GalleryGrid from "./components/GalleryGrid";
 import GallerySection from "./components/GallerySection";
+import CollabsSection from "./components/CollabsSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
@@ -26,7 +27,10 @@ export default function Home() {
       {/* Grid of imagery - second set */}
       <GalleryGrid count={16} />
 
-      {/* Projects Section */}
+      {/* Collabs Section - work with artists/labels/brands */}
+      <CollabsSection />
+
+      {/* Projects Section - Blatant Space initiatives (only shows if projects exist) */}
       <ProjectsSection />
 
       {/* Grid of imagery - third set */}

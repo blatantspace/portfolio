@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { projects, type Project } from "@/lib/projects";
+import { collabs, type Collab } from "@/lib/collabs";
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function CollabCard({ collab, index }: { collab: Collab; index: number }) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -17,22 +17,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         <div
           className="w-full h-full bg-cover bg-center"
           style={{
-            backgroundImage: `url(${project.mainImage})`,
+            backgroundImage: `url(${collab.mainImage})`,
             backgroundColor: '#3a3a3a',
           }}
         />
-        {/* Status badge */}
-        {project.status === "coming-soon" && (
-          <div className="absolute top-4 right-4 bg-rust/90 text-cream text-xs px-3 py-1 uppercase tracking-wider">
-            Coming Soon
-          </div>
-        )}
       </div>
 
       {/* Supporting Images Grid (if any) */}
-      {project.supportImages && project.supportImages.length > 0 && (
+      {collab.supportImages && collab.supportImages.length > 0 && (
         <div className="grid grid-cols-3 gap-1 mb-6">
-          {project.supportImages.map((img, i) => (
+          {collab.supportImages.map((img, i) => (
             <div
               key={i}
               className="aspect-square bg-cover bg-center"
@@ -44,34 +38,32 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
       {/* Content */}
       <div className="space-y-4">
-        {/* Status */}
+        {/* Category & Year */}
         <div className="text-sm text-cream/50 uppercase tracking-wider">
-          {project.status === "active" && "Active Project"}
-          {project.status === "coming-soon" && "In Development"}
-          {project.status === "completed" && "Completed"}
+          {collab.category} · {collab.year}
         </div>
 
         {/* Title */}
         <h3 className="text-3xl md:text-4xl font-light text-cream">
-          {project.title}
+          {collab.title}
         </h3>
 
         {/* Tagline */}
         <p className="text-lg text-cream/70 font-light">
-          {project.tagline}
+          {collab.tagline}
         </p>
 
         {/* Description paragraphs */}
         <div className="space-y-4 text-cream/60 leading-relaxed">
-          {project.description.map((paragraph, i) => (
+          {collab.description.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
         </div>
 
         {/* Links */}
-        {project.links.length > 0 && (
+        {collab.links.length > 0 && (
           <div className="flex flex-wrap gap-4 pt-4">
-            {project.links.map((link, i) => (
+            {collab.links.map((link, i) => (
               <a
                 key={i}
                 href={link.url}
@@ -89,12 +81,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   );
 }
 
-export default function ProjectsSection() {
-  // Don't render section if no projects
-  if (projects.length === 0) {
-    return null;
-  }
-
+export default function CollabsSection() {
   return (
     <section className="w-full py-24 px-6 bg-charcoal">
       <div className="max-w-4xl mx-auto">
@@ -107,17 +94,17 @@ export default function ProjectsSection() {
           className="mb-16"
         >
           <h2 className="text-5xl md:text-7xl font-light text-cream mb-4">
-            Projects
+            Collabs
           </h2>
           <p className="text-xl text-cream/50 font-light">
-            Blatant Space initiatives and experiments
+            Selected work with artists, labels, and brands
           </p>
         </motion.div>
 
-        {/* Projects List */}
+        {/* Collabs List */}
         <div className="space-y-24">
-          {projects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+          {collabs.map((collab, index) => (
+            <CollabCard key={collab.id} collab={collab} index={index} />
           ))}
         </div>
       </div>
