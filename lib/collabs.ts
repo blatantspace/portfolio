@@ -6,10 +6,10 @@ export interface CollabLink {
 export interface Collab {
   id: string;
   title: string;
-  tagline: string; // 1 line description
-  description: string[]; // 2 paragraphs
+  tagline: string;
+  description: string[];
   mainImage: string;
-  supportImages?: string[]; // optional grid of supporting images
+  supportImages?: string[];
   links: CollabLink[];
   year: string;
   category: string;
@@ -19,10 +19,10 @@ export const collabs: Collab[] = [
   {
     id: "gucci-horsebit",
     title: "Gucci Horsebit Loafer",
-    tagline: "Digital artwork for Gucci's Horsebeat Society exhibition",
+    tagline: "Artwork for the Horsebeat Society exhibition",
     description: [
-      "Contributed artwork to Gucci's 'Horsebeat Society' exhibition celebrating the iconic Horsebit loafer. A modern fusion of street art sensibilities and high fashion, bringing digital-age aesthetics to luxury branding.",
-      "Featured vibrant imagery, expressive typography, and a unique blend of contemporary art with Gucci's universe. The work bridges nostalgia and cutting-edge technology.",
+      "Commissioned piece for Gucci's celebration of the Horsebit loafer. Street art meets luxury.",
+      "Shown alongside works from artists across the globe.",
     ],
     mainImage: "/collabs/gucci.jpg",
     supportImages: [],
@@ -35,15 +35,15 @@ export const collabs: Collab[] = [
   {
     id: "homeboy-sandman",
     title: "Homeboy Sandman",
-    tagline: "AI-generated music video for 'Off The Rip' (Steez Lords Remix)",
+    tagline: "Music video for 'Off The Rip' (Steez Lords Remix)",
     description: [
-      "Created an AI-generated music video using DALL-E 2, Runway, and Pika Labs. A collaboration that brought digital-age aesthetics to hip-hop, working with one of the most talented artists in the game.",
-      "The video embraces the tactile warmth of vintage aesthetics while pushing the boundaries of what's possible with generative AI in music visuals.",
+      "AI-generated visuals for one of hip-hop's sharpest lyricists.",
+      "Made with DALL-E 2, Runway, and Pika Labs.",
     ],
     mainImage: "/collabs/homeboy.jpg",
     supportImages: [],
     links: [
-      { label: "Watch Video", url: "https://www.youtube.com/watch?v=aXGMyOAYM6E" },
+      { label: "Watch", url: "https://www.youtube.com/watch?v=aXGMyOAYM6E" },
     ],
     year: "2023",
     category: "Music Video",
@@ -51,10 +51,10 @@ export const collabs: Collab[] = [
   {
     id: "royel-otis",
     title: "Royel Otis",
-    tagline: "Visual direction for emerging Australian duo",
+    tagline: "Visuals for the Australian duo",
     description: [
-      "Visual collaboration with Royel Otis, bringing nostalgic AI-generated aesthetics to their unique sound. The project captures the warmth and texture that defines the Blatant Space approach.",
-      "Created imagery that feels like memories from decades past, achieved through cutting-edge technology.",
+      "Warm, sun-faded imagery for their sound.",
+      "Somewhere between memory and dream.",
     ],
     mainImage: "/collabs/royel-otis.jpg",
     supportImages: [],
@@ -65,10 +65,10 @@ export const collabs: Collab[] = [
   {
     id: "beak",
     title: "BEAK>",
-    tagline: "Artwork for limited edition Tour 7\" single",
+    tagline: "Tour 7\" single artwork",
     description: [
-      "Designed artwork for the BEAK> 'SECRETS' b/w Litronix 'STEPPING UP' split single, available exclusively at tour merch tables. A limited edition release for the band's tour.",
-      "The design captures the experimental, analog spirit of BEAK> while bringing a fresh digital perspective.",
+      "Cover art for the 'SECRETS' b/w Litronix 'STEPPING UP' split single.",
+      "Merch table exclusive.",
     ],
     mainImage: "/collabs/beak.jpg",
     supportImages: [],
@@ -81,10 +81,10 @@ export const collabs: Collab[] = [
   {
     id: "torky",
     title: "Torky Vinyl Cover",
-    tagline: "Album artwork for 'Two Be OK'",
+    tagline: "Artwork for 'Two Be OK'",
     description: [
-      "Created vinyl cover artwork for Torky's 'Two Be OK' release. The design embodies that specific warmth of handmade things from decades past.",
-      "Digital art that feels soft, touchable, human—bridging the gap between nostalgia and modern AI capabilities.",
+      "Vinyl cover design.",
+      "Soft edges. Warm tones.",
     ],
     mainImage: "/collabs/torky.jpg",
     supportImages: [],
@@ -95,16 +95,16 @@ export const collabs: Collab[] = [
   {
     id: "visions-of-hell",
     title: "Visions Of Hell",
-    tagline: "Surreal music video exploring modern alienation",
+    tagline: "Music video for 'Unjust Memes'",
     description: [
-      "Created a surreal music video for the track 'Unjust Memes,' exploring themes of modern alienation through a vintage lens. Featured on Promonews.",
-      "The work highlights the tension between our digital present and analog past, using AI to create imagery that feels both familiar and impossible.",
+      "Surreal visuals. Featured on Promonews.",
+      "What alienation looks like through a broken lens.",
     ],
     mainImage: "/collabs/visions.jpg",
     supportImages: [],
     links: [
-      { label: "Watch Video", url: "https://www.youtube.com/watch?v=VmYBq9O5774" },
-      { label: "View on Promonews", url: "https://www.promonews.tv/videos/2024/11/11/visions-hell-unjust-memes-blatant-space/88950" },
+      { label: "Watch", url: "https://www.youtube.com/watch?v=VmYBq9O5774" },
+      { label: "Promonews", url: "https://www.promonews.tv/videos/2024/11/11/visions-hell-unjust-memes-blatant-space/88950" },
     ],
     year: "2024",
     category: "Music Video",
@@ -112,10 +112,10 @@ export const collabs: Collab[] = [
   {
     id: "26fix",
     title: "26fix",
-    tagline: "Music video visual direction",
+    tagline: "Music video",
     description: [
-      "Visual collaboration bringing the Blatant Space aesthetic to 26fix's unique sound. AI-generated imagery that feels handmade.",
-      "The project showcases how cutting-edge technology can evoke nostalgia and warmth.",
+      "Visual direction.",
+      "AI that feels analog.",
     ],
     mainImage: "/collabs/26fix.jpg",
     supportImages: [],
@@ -126,10 +126,10 @@ export const collabs: Collab[] = [
   {
     id: "mononeon",
     title: "MonoNeon",
-    tagline: "Album cover for genre-defying bassist",
+    tagline: "Album cover",
     description: [
-      "Created album artwork for MonoNeon, the genre-defying bassist known for his viral covers and experimental approach to funk.",
-      "The cover captures the playful, unexpected energy of MonoNeon's music through whimsical character design and bold color choices.",
+      "Artwork for the genre-defying bassist.",
+      "Playful. Unexpected. Loud colors.",
     ],
     mainImage: "/collabs/mononeon.jpg",
     supportImages: [],
