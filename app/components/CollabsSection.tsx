@@ -56,6 +56,24 @@ function CollabCard({ collab, index }: { collab: Collab; index: number }) {
         </div>
       )}
 
+      {/* Supporting Videos Mosaic (if any) */}
+      {collab.supportVideos && collab.supportVideos.length > 0 && (
+        <div className={`grid gap-2 mb-6 ${collab.supportVideos.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+          {collab.supportVideos.map((video, i) => (
+            <div key={i} className="aspect-video overflow-hidden bg-black">
+              <video
+                src={video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* Content */}
       <div className="space-y-4">
         {/* Category & Year */}

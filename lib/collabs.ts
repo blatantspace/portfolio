@@ -11,6 +11,7 @@ export interface Collab {
   mainImage: string;
   youtubeId?: string; // YouTube video ID for embedding
   supportImages?: string[];
+  supportVideos?: string[]; // Local video files for mosaic
   links: CollabLink[];
   year: string;
   category: string;
@@ -103,6 +104,10 @@ export const collabs: Collab[] = [
     ],
     mainImage: "/collabs/beak.png",
     supportImages: [],
+    supportVideos: [
+      "/gallery/videos/beak.mp4",
+      "/gallery/videos/beak_vide.mp4",
+    ],
     links: [
       { label: "Listen", url: "https://bfrecs.bandcamp.com" },
     ],
