@@ -9,6 +9,7 @@ export interface Collab {
   tagline: string;
   description: string[];
   mainImage: string;
+  youtubeId?: string; // YouTube video ID for embedding
   supportImages?: string[];
   links: CollabLink[];
   year: string;
@@ -41,10 +42,9 @@ export const collabs: Collab[] = [
       "Made with DALL-E 2, Runway, and Pika Labs.",
     ],
     mainImage: "/collabs/homeboy.png",
+    youtubeId: "aXGMyOAYM6E",
     supportImages: [],
-    links: [
-      { label: "Watch", url: "https://www.youtube.com/watch?v=aXGMyOAYM6E" },
-    ],
+    links: [],
     year: "2023",
     category: "Music Video",
   },
@@ -57,10 +57,24 @@ export const collabs: Collab[] = [
       "Somewhere between memory and dream.",
     ],
     mainImage: "/collabs/royel-otis.png",
+    youtubeId: "NbORHQk88-s",
     supportImages: [],
-    links: [
-      { label: "Watch", url: "https://www.youtube.com/watch?v=NbORHQk88-s" },
+    links: [],
+    year: "2024",
+    category: "Music Video",
+  },
+  {
+    id: "stone-killer",
+    title: "Stone Killer",
+    tagline: "Music video",
+    description: [
+      "Visual direction.",
+      "Heavy. Textured. Relentless.",
     ],
+    mainImage: "/collabs/stone-killer.png",
+    youtubeId: "O6DFWmr586U",
+    supportImages: [],
+    links: [],
     year: "2024",
     category: "Music Video",
   },
@@ -103,9 +117,9 @@ export const collabs: Collab[] = [
       "What alienation looks like through a broken lens.",
     ],
     mainImage: "/collabs/visions.png",
+    youtubeId: "VmYBq9O5774",
     supportImages: [],
     links: [
-      { label: "Watch", url: "https://www.youtube.com/watch?v=VmYBq9O5774" },
       { label: "Promonews", url: "https://www.promonews.tv/videos/2024/11/11/visions-hell-unjust-memes-blatant-space/88950" },
     ],
     year: "2024",

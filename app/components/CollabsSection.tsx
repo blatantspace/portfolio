@@ -3,6 +3,20 @@
 import { motion } from "framer-motion";
 import { collabs, type Collab } from "@/lib/collabs";
 
+function YouTubeEmbed({ videoId }: { videoId: string }) {
+  return (
+    <div className="relative aspect-video w-full overflow-hidden bg-black">
+      <iframe
+        src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
+        title="YouTube video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="absolute inset-0 w-full h-full"
+      />
+    </div>
+  );
+}
+
 function CollabCard({ collab, index }: { collab: Collab; index: number }) {
   return (
     <motion.article
@@ -12,16 +26,22 @@ function CollabCard({ collab, index }: { collab: Collab; index: number }) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="w-full"
     >
-      {/* Main Image */}
-      <div className="relative aspect-video w-full overflow-hidden bg-charcoal mb-6">
-        <div
-          className="w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${collab.mainImage})`,
-            backgroundColor: '#3a3a3a',
-          }}
-        />
-      </div>
+      {/* Video or Image */}
+      {collab.youtubeId ? (
+        <div className="mb-6">
+          <YouTubeEmbed videoId={collab.youtubeId} />
+        </div>
+      ) : (
+        <div className="relative aspect-video w-full overflow-hidden bg-charcoal mb-6">
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${collab.mainImage})`,
+              backgroundColor: '#3a3a3a',
+            }}
+          />
+        </div>
+      )}
 
       {/* Supporting Images Grid (if any) */}
       {collab.supportImages && collab.supportImages.length > 0 && (
