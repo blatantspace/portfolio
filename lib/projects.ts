@@ -23,7 +23,7 @@ export const projects: Project[] = [
       "Tool for generating nostalgic imagery.",
       "The Blatant Space aesthetic, open to everyone.",
     ],
-    mainImage: "/projects/retro-graphics.jpg",
+    mainImage: "/projects/retro-graphics.png",
     supportImages: [],
     links: [
       { label: "Create", url: "https://www.retro.graphics/create" },
@@ -38,7 +38,7 @@ export const projects: Project[] = [
       "A companion, not a replacement.",
       "Helps you find what you're looking for.",
     ],
-    mainImage: "/projects/robin-guide.jpg",
+    mainImage: "/projects/robin-guide.png",
     supportImages: [],
     links: [
       { label: "Visit", url: "https://robin.guide" },
