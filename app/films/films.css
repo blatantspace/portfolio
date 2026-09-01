@@ -1,0 +1,358 @@
+.films {
+  min-height: 100vh;
+  background: #faf8f3;
+  color: #232320;
+  font-family: Palatino, "Palatino Linotype", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html:has(.films),
+body:has(.films) {
+  background: #faf8f3;
+  color: #232320;
+}
+
+.films ::selection {
+  background: #7d6a4f;
+  color: #faf8f3;
+}
+
+.films img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: unset;
+}
+
+.films a {
+  color: inherit;
+}
+
+.films-shell {
+  width: min(42rem, calc(100% - 2.5rem));
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.75rem 0 3.5rem;
+  overflow-x: clip;
+}
+
+@media (min-width: 768px) {
+  .films-shell {
+    width: min(46rem, calc(100% - 4rem));
+    padding: 2.25rem 0 4.5rem;
+  }
+}
+
+.films-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #232320;
+}
+
+.films-brand {
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #55534d;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.films-date {
+  font-size: 0.68rem;
+  color: #55534d;
+  letter-spacing: 0.06em;
+  text-align: right;
+  min-width: 0;
+}
+
+.films-date-full {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .films-date-full {
+    display: inline;
+  }
+}
+
+.films-tier {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 0.85rem;
+  row-gap: 0.2rem;
+  padding: 0.7rem 0;
+  border-top: 1px solid #d8d3c8;
+  align-items: start;
+}
+
+.films-tier:last-of-type {
+  border-bottom: 1px solid #d8d3c8;
+}
+
+.films-tier-name {
+  font-size: 1.15rem;
+  min-width: 0;
+}
+
+.films-tier-desc {
+  grid-column: 1 / -1;
+  font-size: 0.92rem;
+  color: #55534d;
+  line-height: 1.55;
+}
+
+.films-tier-price {
+  font-size: 1.2rem;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.films-tier-price small {
+  display: block;
+  font-size: 0.68rem;
+  color: #55534d;
+  letter-spacing: 0.04em;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 420px) {
+  .films-tier {
+    grid-template-columns: 1fr;
+  }
+
+  .films-tier-price {
+    text-align: left;
+  }
+}
+
+.films-h1 {
+  font-weight: normal;
+  font-size: clamp(1.45rem, 6.2vw, 2.35rem);
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  margin: 1.15rem 0 0.85rem;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.films-hero {
+  margin: 0.55rem 0 0.35rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.films-hero span {
+  display: block !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.films-hero img {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 60%;
+}
+
+@media (min-width: 768px) {
+  .films-hero img {
+    aspect-ratio: 2.4 / 1;
+  }
+}
+
+.films-hero-caption {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: #55534d;
+  margin-top: 0.4rem;
+  letter-spacing: 0.03em;
+}
+
+.films-lede {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin: 0.85rem 0 0.4rem;
+  max-width: 38rem;
+}
+
+.films-label {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #7d6a4f;
+  margin: 1.35rem 0 0.45rem;
+}
+
+.films-addons {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.films-addons td {
+  padding: 0.5rem 0;
+  border-top: 1px solid #d8d3c8;
+  font-size: 0.92rem;
+  vertical-align: baseline;
+}
+
+.films-addons tr:last-child td {
+  border-bottom: 1px solid #d8d3c8;
+}
+
+.films-addons .price {
+  text-align: right;
+  font-size: 1rem;
+  white-space: nowrap;
+  padding-left: 1rem;
+}
+
+.films-addons .note {
+  color: #55534d;
+}
+
+@media (max-width: 540px) {
+  .films-addons tbody,
+  .films-addons tr {
+    display: block;
+  }
+
+  .films-addons td {
+    display: block;
+  }
+
+  .films-addons .price {
+    text-align: left;
+    padding-left: 0;
+    padding-top: 0.1rem;
+    border-top: none;
+  }
+}
+
+.films-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .films-cols {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+  }
+}
+
+.films-list {
+  list-style: none;
+}
+
+.films-list li {
+  padding: 0.5rem 0;
+  border-top: 1px solid #d8d3c8;
+  font-size: 0.92rem;
+}
+
+.films-list li:last-child {
+  border-bottom: 1px solid #d8d3c8;
+}
+
+.films-list em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.films-list .sub,
+.films-process .sub {
+  display: block;
+  color: #55534d;
+  font-size: 0.8rem;
+  margin-top: 0.12rem;
+}
+
+.films-process {
+  list-style: none;
+  counter-reset: step;
+}
+
+.films-process li {
+  counter-increment: step;
+  display: flex;
+  padding: 0.5rem 0;
+  border-top: 1px solid #d8d3c8;
+  font-size: 0.92rem;
+}
+
+.films-process li:last-child {
+  border-bottom: 1px solid #d8d3c8;
+}
+
+.films-process li::before {
+  content: counter(step, upper-roman);
+  color: #7d6a4f;
+  min-width: 1.6rem;
+  font-size: 0.92rem;
+}
+
+.films-quote {
+  margin: 1.75rem 0 0.5rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid #7d6a4f;
+  font-style: italic;
+  font-size: 1.02rem;
+  color: #55534d;
+  max-width: 36rem;
+}
+
+.films-fine {
+  font-size: 0.78rem;
+  color: #55534d;
+  line-height: 1.6;
+  margin-top: 1.1rem;
+}
+
+.films-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.25rem;
+  background: #232320;
+  color: #faf8f3;
+  text-decoration: none;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+}
+
+.films-cta:hover {
+  background: #3a3934;
+}
+
+.films-foot {
+  margin-top: 2.25rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #232320;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.4rem 1.25rem;
+  font-size: 0.78rem;
+  color: #55534d;
+  letter-spacing: 0.06em;
+}
+
+.films-foot a {
+  text-decoration: none;
+}
+
+.films-foot a:hover {
+  color: #232320;
+}
